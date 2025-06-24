@@ -1,0 +1,37 @@
+using System;
+using System.Linq;
+
+namespace _01_Two_sum
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = Console.ReadLine()
+                .Split(',')
+                .Select(int.Parse)
+                .ToArray();
+            int target = int.Parse(Console.ReadLine());
+            Console.WriteLine(string.Join(",",sumOf2Nums(nums, target)));
+        }
+
+        static int[] sumOf2Nums(int[] nums, int target)
+        {
+            int[] targertNums = new int[2];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int current = nums[i];
+                for (global::System.Int32 j = 0; j < nums.Length; j++)
+                {
+                    if (nums[i] + nums[j] == target && i != j)
+                    {
+                        targertNums[0] = i;
+                        targertNums[1] = j;
+                        return targertNums;
+                    }
+                }
+            }
+            return null;
+        }
+    }
+}
