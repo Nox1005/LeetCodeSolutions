@@ -1,5 +1,8 @@
-# LeetCodeSolutions
+# LeetCode Solutions in C#
 
-easy:
+This repository contains my personal solutions to LeetCode algorithm problems, organized by difficulty and topic.
 
-Medium:
+## Topics
+- Arrays
+- List
+- Strings
