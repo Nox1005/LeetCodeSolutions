@@ -4,5 +4,5 @@ This repository contains my personal solutions to LeetCode algorithm problems, o
 
 ## Topics
 - Arrays
-- List
+- Lists
 - Strings
