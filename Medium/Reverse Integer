@@ -1,0 +1,41 @@
+using System;
+
+namespace Reverse_Integer;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        int x = int.Parse(Console.ReadLine());
+
+        Console.WriteLine(Reverser(x));
+    }
+
+    static int Reverser (int X)
+    {
+        long checker = 0;
+
+        int sign = 0;
+
+        if (X > 0)
+            sign = 1;
+
+        else if (X < 0)
+            sign = -1;
+
+        X = Math.Abs(X);
+
+        while (X > 0)
+        {
+            int current = X % 10;
+            checker = checker * 10 + current;
+            X /= 10;
+        }
+        checker *= sign;
+        if (checker > int.MaxValue || checker < int.MinValue)
+        {
+            return 0;
+        }
+        return (int)checker;
+    }
+}
